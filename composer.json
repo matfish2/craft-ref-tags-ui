@@ -1,0 +1,38 @@
+{
+  "name": "matfish/craft-ref-tags-ui",
+  "description": "Generate Reference Tags from anywhere in Craft's control panel",
+  "type": "craft-plugin",
+  "keywords": ["reference tags", "ui"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matanya Fishaimer",
+      "homepage": "https://developer-website.tld"
+    }
+  ],
+  "support": {
+    "email": "matfish2@gmail.com",
+    "issues": "https://github.com/matfish2/craft-ref-tags-ui/issues?state=open",
+    "source": "https://github.com/matfish2/craft-ref-tags-ui",
+    "docs": "https://github.com/matfish2/craft-ref-tags-ui/blob/master/README.md"
+  },
+  "require": {
+    "craftcms/cms": "^4.0.0",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "matfish\\RefTags\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Reference Tags UI",
+    "handle": "ref-tags-ui"
+  },
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}
