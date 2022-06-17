@@ -1,6 +1,6 @@
 {
   "name": "matfish/craft-ref-tags-ui",
-  "description": "Generate Reference Tags from anywhere in Craft's control panel",
+  "description": "Generate Reference Tags directly from the Element Editor",
   "type": "craft-plugin",
   "keywords": ["reference tags", "ui"],
   "license": "MIT",
