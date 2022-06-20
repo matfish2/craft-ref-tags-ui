@@ -69,6 +69,8 @@ export default {
 <style scoped>
   .field {
     margin-left:0 !important;
+    margin-right:0 !important;
+
   }
 
   >>> .multiselect {

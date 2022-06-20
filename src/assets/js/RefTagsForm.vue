@@ -9,7 +9,7 @@
                       v-model="form.elementProperty"
                       :items="globalSetFields" label="Global Field"/>
 
-      <div v-if="form.elementType!=='globalset'">
+      <div v-if="form.elementType!=='globalset'" class="mb-3">
         <div v-if="form.elementType==='entry'" class="entry-qualifiers">
           <dropdown-field name="sectionId"
                           label="Section"
