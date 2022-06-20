@@ -660,16 +660,8 @@ video {
   padding: 0.25rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .p-4 {
   padding: 1rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
 }
 
 .shadow-2xl {

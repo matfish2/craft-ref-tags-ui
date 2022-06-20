@@ -26,7 +26,8 @@ php craft plugin/install ref-tags-ui
 On any Element editor page (Entry, Asset, Category, Tag) click `Ctrl+Alt+R` to
 trigger the modal:
 
-![](https://user-images.githubusercontent.com/1510460/174266394-0ff46bd0-5a9d-448d-abc6-1345b6269e3a.png)
+
+![](https://user-images.githubusercontent.com/1510460/174532283-945ebd5c-7aaa-4c1f-ac68-d61cea1fd43d.png)
 
 By Default the modal will load Global Sets, as this is the most common use case.
 

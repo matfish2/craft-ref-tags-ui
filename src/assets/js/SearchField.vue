@@ -67,5 +67,11 @@ export default {
 </script>
 
 <style scoped>
+  .field {
+    margin-left:0 !important;
+  }
 
+  >>> .multiselect {
+    max-width:500px;
+  }
 </style>

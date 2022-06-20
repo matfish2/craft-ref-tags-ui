@@ -39,5 +39,7 @@ export default {
 </script>
 
 <style scoped>
-
+.field {
+  margin-left: 0 !important;
+}
 </style>

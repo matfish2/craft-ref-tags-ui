@@ -75,7 +75,6 @@
 
       </div>
 
-      <hr>
       <div id="copy-input-wrapper" class="copytextbtn code small light highlighter" role="button"
            title="Copy to clipboard"
            aria-label="Copy to clipboard" style="padding:10px;" tabindex="0" @click="copy" v-if="ref.length>0">
