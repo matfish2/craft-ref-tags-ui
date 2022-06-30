@@ -46,7 +46,7 @@ trait CustomFieldsTrait
         $fields = [];
 
         /** @var Field $field */
-        foreach ($fieldLayout->getCustomFields() as $field) {
+        foreach ($fieldLayout->getFields() as $field) {
             if (!in_array(get_class($field), [
                 Matrix::class,
                 Table::class,

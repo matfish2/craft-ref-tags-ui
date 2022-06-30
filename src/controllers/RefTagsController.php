@@ -19,7 +19,7 @@ class RefTagsController extends \craft\web\Controller
         foreach ($gs as $g) {
             $fields = [];
 
-            foreach ($g->getCustomFields() as $field) {
+            foreach ($g->getFields() as $field) {
                 $fields[] = [
                     'value' => $field->handle,
                     'label' => $field->name

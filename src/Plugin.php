@@ -48,11 +48,15 @@ class Plugin extends BasePlugin
         // check we have a cp request as we don't want to this js to run anywhere but the cp
         // and while we're at it check for a logged in user as well
         if (Craft::$app->request->getIsCpRequest() && Craft::$app->getUser()) {
-            Event::on(
-                Element::class,
-                Element::EVENT_DEFINE_SIDEBAR_HTML,
-                function ($event) {
+            $hooks = [
+                'cp.entries.edit.meta',
+                'cp.assets.edit.meta',
+                'cp.users.edit.details',
+                'cp.categories.edit.details'
+            ];
 
+            foreach ($hooks as $hook) {
+                Craft::$app->view->hook($hook, function (array &$context) {
                     // Get view
                     $view = Craft::$app->getView();
 
@@ -60,7 +64,16 @@ class Plugin extends BasePlugin
                     $view->registerAssetBundle(RefTagsAssetBundle::class);
 
                     $trigger = $this->settings->trigger;
-                    $event->html .= '<div id="ref-tags-app"><ref-tags-modal :on="isOn" @close="isOn=false"></ref-tags-modal></div><script>window.refTagsUiTrigger ="' . $trigger . '";</script></script>';
+                    return '<div id="ref-tags-app"><ref-tags-modal :on="isOn" @close="isOn=false"></ref-tags-modal></div><script>window.refTagsUiTrigger ="' . $trigger . '";</script></script>';
+                });
+            }
+
+            Event::on(
+                Element::class,
+                Element::EVENT_DEFINE_SIDEBAR_HTML,
+                function ($event) {
+
+
                 }
             );
         }
